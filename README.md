@@ -25,11 +25,22 @@ Until the deadline all of your PRs **need to be merged** and your final app **ne
 
 ## Problem Statement (max. 500 words)
 
-TODO: Add your problem statement here. 
+In my free time, I love playing and watching tennis. However, it is quite difficult to keep track of everything going on at the moment (e.g. live matches, rankings, tournaments, facts, etc.). Therefore I want to provide an App which gives an overview of not only live events but also historic data. 
+It should provide the current ranking and also the live race ranking of the respective year. Starting from that, the app is suppossed to be able to navigate to different players, adding a little profile (prize money, nationality, age, etc.). Users can favorize certain players in order to receive notifications of their scores for instance.
+Furthermore, there should be a feed for live scores ordered by their respective tournament. It should also be able to provide live match statistics. 
+I also want to do an overview of all tennis tournaments being organized during the year (maybe on a map). Key information should also be displayed about the tournaments (last winner, prize money, history data, etc.)
+Last but not least, it should provide a little history page with various records the user can choose from. 
+
+To sum up, the app should be a fusion of a tennis wiki page and a live statistics/live score page, to have everything on one space.
 
 ## Requirements
 
-TODO: Document the requirements you fulfilled with your app. Discuss them with your tutor.
+- Provide rankings form the current year and last seasons 
+- Favorize certain players to follow them and their matches
+- give information about torunaments and players 
+- inspect all tournaments around the world 
+- show live match statistics 
+- see records as a ranking in a little history feed
 
 ## Analysis
 
