@@ -35,12 +35,18 @@ To sum up, the app should be a fusion of a tennis wiki page and a live statistic
 
 ## Requirements
 
-- Provide rankings form the current year and last seasons 
-- Favorize certain players to follow them and their matches
-- give information about torunaments and players 
-- inspect all tournaments around the world 
-- show live match statistics 
-- see records as a ranking in a little history feed
+FR1: Provide current player rankings from the current year and last seasons 
+FR2: Favorize certain players to follow them and their matches
+FR3: Search and Filter for players (after name, nationality, etc.)
+FR4: give information about torunaments and players 
+FR5: inspect all tournaments around the world 
+FR6: see records as a ranking in a little history feed
+FR7: provide live scores 
+
+NFR1: 3-7 SwiftUI views 
+NFR2: Use Apple's SF-Symbols 
+NFR3: Follow Apple's Human Interface Guidelines 
+NFR4: Source code follows best practices
 
 ## Analysis
 
