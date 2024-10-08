@@ -51,7 +51,7 @@ NFR4: Source code follows best practices
 ## Analysis
 
 TODO: Include an analysis object model. You can use [draw.io](https://draw.io) or [apollon](https://apollon.ase.cit.tum.de) to create it. Please add all models as an Image - not as a link! 
-![alt text](https://gitlab.lrz.de/ase/ipraktikum/IOS2425/Introcourse/ge83mav/-/blob/add-analysis-object-model/UMLClassDiagram.png?ref_type=heads)
+<img src="UMLClassdiagram.png" align="center" height="350" width="600"/>
 
 ## System Design
 
