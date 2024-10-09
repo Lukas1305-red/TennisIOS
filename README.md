@@ -35,18 +35,20 @@ To sum up, the app should be a fusion of a tennis wiki page and a live statistic
 
 ## Requirements
 
-FR1: Provide current player rankings from the current year and last seasons 
-FR2: Favorize certain players to follow them and their matches
-FR3: Search and Filter for players (after name, nationality, etc.)
-FR4: give information about torunaments and players 
-FR5: inspect all tournaments around the world 
-FR6: see records as a ranking in a little history feed
-FR7: provide live scores 
 
-NFR1: 3-7 SwiftUI views 
-NFR2: Use Apple's SF-Symbols 
-NFR3: Follow Apple's Human Interface Guidelines 
-NFR4: Source code follows best practices
+- FR1: Provide current player rankings from the current year and last seasons 
+- FR2: Favorize certain players to follow them and their matches
+- FR3: Search and Filter for players (after name, nationality, etc.)
+- FR4: give information about torunaments and players 
+- FR5: inspect all tournaments around the world 
+- FR6: see records as a ranking in a little history feed
+- FR7: provide live scores 
+
+-------------------------------------------------------------------------
+- NFR1: 3-7 SwiftUI views 
+- NFR2: Use Apple's SF-Symbols 
+- NFR3: Follow Apple's Human Interface Guidelines 
+- NFR4: Source code follows best practices
 
 ## Analysis
 
@@ -58,4 +60,16 @@ TODO: Include a system design overview describing your application.
 
 ## Product Backlog
 
-TODO: Add a product backlog and don't forget to update it with each MR.
+- RANKING-1: Implement structure of the ranking overview
+- RANKING-2: Add players to the Ranking structure 
+- RANKING-3: Access player's info from the ranking overview 
+- RANKING-4: Search for player 
+- RANKING-5: Filter rankings by favorite players
+- PLAYER-1: Add player infos 
+- PLAYER-2: Add as favorite player (add "star")
+- PLAYER-3: Remove favour status (remove "star") 
+- CALENDAR-1: Add calendar overview 
+- CALENDAR-2: Add tournaments to the overview 
+- CALENDAR-3: Navigate through months 
+- TOURNAMENT-1: Add title defender about the respective tournament
+- TOURNAMENT-2: Add facts to the respective tournament
