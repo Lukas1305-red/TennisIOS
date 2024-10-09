@@ -56,7 +56,7 @@ TODO: Include an analysis object model. You can use [draw.io](https://draw.io) o
 
 ## System Design
 
-TODO: Include a system design overview describing your application.
+<img src="SystemDesign.png" align="center" height="350" width="600"/> 
 
 ## Product Backlog
 
