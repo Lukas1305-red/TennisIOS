@@ -14,7 +14,7 @@ struct PlayerDetailView: View {
         if UIImage(named: String(id)) != nil {
             Image(String(id))
         } else {
-            Image(systemName: "person")
+            Image(systemName: "person.fill")
         }
     }
     var body: some View {
