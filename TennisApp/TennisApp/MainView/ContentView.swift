@@ -9,7 +9,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            RankingView()
+            PlayerOverview()
                 .tabItem {
                     Image(systemName: "trophy")
                     Text("Ranking")
@@ -25,4 +25,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(Model() as Model)
 }

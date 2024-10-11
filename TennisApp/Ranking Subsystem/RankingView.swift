@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct RankingView: View {
-    var body: some View {
-        Text("Hello, Ranking!")
+    @Environment(Model.self) private var model: Model
+    private var players: [Player] {
+        model.ranking.players
     }
-}
+    var body: some View {
+        List {
+            if players == [] {
+                Text("You have to start your server")
+            } else {
+                ForEach(players, id: \.id) { player in
+                    NavigationLink {
+                        PlayerDetailView(id: player.id)
+                    } label: {
+                        PlayerCellView(id: player.id)
+                    }
+                }
+            }
+            }
+        }
+    }
 
 #Preview {
     RankingView()
+        .environment(Model() as Model)
 }
