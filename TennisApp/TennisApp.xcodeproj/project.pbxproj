@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A12CB937DE006DC02C /* SwiftyJSON */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		37F101DD2CB6729800C91A8B /* TennisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 			);
 			name = TennisApp;
 			packageProductDependencies = (
+				373BF3A12CB937DE006DC02C /* SwiftyJSON */,
 			);
 			productName = TennisApp;
 			productReference = 37F101DD2CB6729800C91A8B /* TennisApp.app */;
@@ -116,6 +122,9 @@
 			);
 			mainGroup = 37F101D42CB6729800C91A8B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 37F101DE2CB6729800C91A8B /* Products */;
 			projectDirPath = "";
@@ -369,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		373BF3A12CB937DE006DC02C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37F101D52CB6729800C91A8B /* Project object */;
 }

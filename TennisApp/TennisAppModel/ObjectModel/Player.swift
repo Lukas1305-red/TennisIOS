@@ -9,11 +9,10 @@ import Foundation
 
 public struct Player {
     public let name: String
-    public let nationality: [String]?
-    public let notTeam: [String]?
+    public let nationality: String
     public var rankingPoints: UInt32
     public var rankingPosition: UInt32
-    public var starred: Bool?
+    public var starred: Bool
     public var id: Int
     // let wonTournaments: Int
     /// - Parameters:
@@ -26,15 +25,13 @@ public struct Player {
     ///     - age: the player's age
 
     public init(name: String,
-                nationality: [String],
-                notTeam: [String],
+                nationality: String,
                 nameCode: String,
                 rankingPoints: UInt32,
                 rankingPosition: UInt32,
                 id: Int) {
         self.name = name
         self.nationality = nationality
-        self.notTeam = notTeam
         self.rankingPoints = rankingPoints
         self.rankingPosition = rankingPosition
         self.starred = false
@@ -48,7 +45,6 @@ extension Player: Codable {
     enum CodingKeys: String, CodingKey {
         case name = "rowName"
         case nationality
-        case notTeam
         case rankingPoints = "points"
         case rankingPosition = "ranking"
         case starred

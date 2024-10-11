@@ -31,12 +31,16 @@ struct PlayerCellView: View {
             HStack(alignment: .center, spacing: 10) {
                 Text(String(player.rankingPosition))
                     .font(Font.system(size: 20, weight: .bold))
+                    .frame(width: 35, alignment: .center)
                 Text(player.name)
                     .foregroundColor(.primary)
                     .font(Font.system(size: 20))
-                Text("Place Holder").font(Font.system(size: 15))
-                Spacer()
+                    .frame(width: 100, alignment: .leading)
+                Text(player.nationality)
+                    .font(Font.system(size: 15))
+                    .frame(width: 70, alignment: .center)
                 Text(String(player.rankingPoints))
+                    .frame(width: 50)
             }
             .padding()
         }
