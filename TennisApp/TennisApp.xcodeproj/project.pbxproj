@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A12CB937DE006DC02C /* SwiftyJSON */; };
+		373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A42CB98124006DC02C /* SwiftFlags */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */,
 				373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +95,7 @@
 			name = TennisApp;
 			packageProductDependencies = (
 				373BF3A12CB937DE006DC02C /* SwiftyJSON */,
+				373BF3A42CB98124006DC02C /* SwiftFlags */,
 			);
 			productName = TennisApp;
 			productReference = 37F101DD2CB6729800C91A8B /* TennisApp.app */;
@@ -124,6 +127,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 37F101DE2CB6729800C91A8B /* Products */;
@@ -388,6 +392,14 @@
 				minimumVersion = 5.0.2;
 			};
 		};
+		373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andreabusi/SwiftFlags.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -395,6 +407,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		373BF3A42CB98124006DC02C /* SwiftFlags */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */;
+			productName = SwiftFlags;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
