@@ -49,7 +49,7 @@ struct PlayerCellView: View {
 }
 
 #Preview {
-    let model: Model = Model()
+    let model = Model()
     PlayerCellView(id: 720)
         .background(Color("BackgroundColor"))
         .environment(model)

@@ -14,7 +14,7 @@ struct RankingView: View {
     }
     var body: some View {
         List {
-            if players == [] {
+            if players.isEmpty {
                 Text("You have to start your server")
             } else {
                 ForEach(players, id: \.id) { player in
@@ -25,9 +25,9 @@ struct RankingView: View {
                     }
                 }
             }
-            }
         }
     }
+}
 
 #Preview {
     RankingView()

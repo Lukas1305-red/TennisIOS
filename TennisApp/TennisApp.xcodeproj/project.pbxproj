@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A12CB937DE006DC02C /* SwiftyJSON */; };
 		373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A42CB98124006DC02C /* SwiftFlags */; };
+		373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 373BF3A82CB98AFF006DC02C /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373BF3A82CB98AFF006DC02C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		37F101DD2CB6729800C91A8B /* TennisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 		37F101D42CB6729800C91A8B = {
 			isa = PBXGroup;
 			children = (
+				373BF3A82CB98AFF006DC02C /* .swiftlint.yml */,
 				37F101DF2CB6729800C91A8B /* TennisApp */,
 				37F101DE2CB6729800C91A8B /* Products */,
 				37F101F92CB6DF8700C91A8B /* Ranking Subsystem */,
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

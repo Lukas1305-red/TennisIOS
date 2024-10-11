@@ -20,6 +20,6 @@ import SwiftUI
         ranking.players.append(contentsOf: try await RankingDataSource().fetchRanking())
     }
     public func getPlayerByID(playerID: Int) -> Player? {
-        ranking.players.first(where: { $0.id == playerID})
+        ranking.players.first(where: { $0.id == playerID })
     }
 }

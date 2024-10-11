@@ -29,7 +29,8 @@ public struct RankingDataSource {
                     let rankingPosition = player["ranking"].uInt32Value
                     let rankingPoints = player["points"].uInt32Value
                     let id = player["id"].intValue
-                    let nationality = player["country"]["name"].string!
+                    let nationalityArray = player["country"]
+                    let nationality = player["name"].stringValue
                     let team = player["team"]
                     let nameCode = team["nameCode"].stringValue
                     let playerObject = Player(name: name,

@@ -16,7 +16,7 @@ struct PlayerDetailView: View {
 }
 
 #Preview {
-    let model: Model = Model()
+    let model = Model()
     PlayerDetailView(id: 720)
         .environment(model)
 }
