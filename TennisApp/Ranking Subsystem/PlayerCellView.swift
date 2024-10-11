@@ -43,8 +43,6 @@ struct PlayerCellView: View {
                     Text(String(player.rankingPoints))
                         .frame(width: 50)
                 }
-                    
-                    
             }.padding()
         }
     }
