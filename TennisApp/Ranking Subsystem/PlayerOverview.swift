@@ -18,5 +18,5 @@ struct PlayerOverview: View {
 }
 
 #Preview {
-    PlayerOverview().environment(Model() as Model)
+    PlayerOverview().environment(Model())
 }

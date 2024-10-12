@@ -25,5 +25,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(Model() as Model)
+        .environment(Model())
 }
