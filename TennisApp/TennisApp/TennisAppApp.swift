@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TennisAppApp: App {
+    @State var globalViewModel = Model()
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .environment(globalViewModel)
     }
 }
