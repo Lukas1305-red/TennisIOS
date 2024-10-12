@@ -15,15 +15,20 @@ struct PlayerDetailView: View {
     }
     var body: some View {
         model.getPlayerByID(playerID: id).map { player in
-            VStack {
-                HStack {
+            VStack(alignment: .leading) {
+                HStack(alignment: .center) {
                     image
-                    FavoritePlayerButton(id: player.id)
+                        .border(.black)
+                    FavoritePlayerButton(id: id)
                 }
-                VStack {
+                VStack(alignment: .leading) {
                     Text(player.name)
+                        .font(Font.system(size: 40, weight: .bold))
                     Text(player.nationality)
+                        .font(Font.system(size: 30, weight: .bold))
+                        .foregroundColor(.gray)
                 }
+                .padding()
                 PlayerInfoView(id: player.id)
                 Spacer()
             }
