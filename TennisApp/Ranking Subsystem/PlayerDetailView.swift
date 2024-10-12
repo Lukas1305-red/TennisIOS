@@ -11,14 +11,23 @@ struct PlayerDetailView: View {
     @Environment(Model.self) private var model: Model
     var id: Int
     var image: Image {
-        if UIImage(named: String(id)) != nil {
-            Image(String(id))
-        } else {
-            Image(systemName: "person.fill")
-        }
+        model.fetchImage(playerID: id)
     }
     var body: some View {
-        image
+        model.getPlayerByID(playerID: id).map { player in
+            VStack {
+                HStack {
+                    image
+                    FavoritePlayerButton(id: player.id)
+                }
+                VStack {
+                    Text(player.name)
+                    Text(player.nationality)
+                }
+                PlayerInfoView(id: player.id)
+                Spacer()
+            }
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(Model.self) private var model: Model
     var body: some View {
         TabView {
             PlayerOverview()

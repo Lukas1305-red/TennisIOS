@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct FavoritePlayerButton: View {
+    @Environment(Model.self) private var model: Model
+    var id: Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            model.toggleFavoritePlayer(playerID: id)
+        }) {
+            Image(systemName: model.playerIsFavorite(playerID: id) ? "star.fill" : "star")
+                .foregroundColor(.orange)
+                .imageScale(.large)
+        }
     }
 }
 
 #Preview {
-    FavoritePlayerButton()
+    let model = Model()
+    FavoritePlayerButton(id: 720)
+        .environment(model)
 }
