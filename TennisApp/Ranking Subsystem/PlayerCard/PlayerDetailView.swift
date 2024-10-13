@@ -18,12 +18,13 @@ struct PlayerDetailView: View {
             VStack(alignment: .leading) {
                 HStack(alignment: .center) {
                     image
-                        .border(.black)
-                    FavoritePlayerButton(id: id)
                 }
                 VStack(alignment: .leading) {
-                    Text(player.name)
-                        .font(Font.system(size: 40, weight: .bold))
+                    HStack {
+                        Text(player.name)
+                            .font(Font.system(size: 40, weight: .bold))
+                        FavoritePlayerButton(id: id)
+                    }
                     Text(player.nationality)
                         .font(Font.system(size: 30, weight: .bold))
                         .foregroundColor(.gray)

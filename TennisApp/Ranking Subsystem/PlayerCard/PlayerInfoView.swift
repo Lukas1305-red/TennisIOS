@@ -18,7 +18,7 @@ struct PlayerInfoView: View {
                         .font(Font.system(size: 20, weight: .bold))
                         Spacer()
                     Text(String(player.tournamentsPlayed))
-                        .font(Font.system(size: 20, weight: .bold))
+                        .font(Font.custom("VarelaRound-Regular", size: 30))
                 }
                 .padding()
                 PlayerRankingInfo(id: id)

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FloatingButton
 
 struct RankingView: View {
     @Environment(Model.self) private var model: Model
