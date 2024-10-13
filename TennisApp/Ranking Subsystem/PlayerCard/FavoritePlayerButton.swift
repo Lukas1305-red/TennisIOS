@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritePlayerButton: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var id: Int
     var body: some View {
         Button(action: {
@@ -22,7 +22,7 @@ struct FavoritePlayerButton: View {
 }
 
 #Preview {
-    let model = Model()
+    let model = RankingModel()
     FavoritePlayerButton(id: 720)
         .environment(model)
 }

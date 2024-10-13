@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerInfoView: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var id: Int
     var body: some View {
         model.getPlayerByID(playerID: id).map { player in
@@ -31,7 +31,7 @@ struct PlayerInfoView: View {
 }
 
 #Preview {
-    let model = Model()
+    let model = RankingModel()
     PlayerInfoView(id: 720)
         .environment(model)
 }

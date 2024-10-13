@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TennisAppApp: App {
-    @State var globalViewModel = Model()
+    @State var globalViewModel = RankingModel()
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerOverview: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var body: some View {
         NavigationStack {
             RankingView()
@@ -18,5 +18,5 @@ struct PlayerOverview: View {
 }
 
 #Preview {
-    PlayerOverview().environment(Model())
+    PlayerOverview().environment(RankingModel())
 }

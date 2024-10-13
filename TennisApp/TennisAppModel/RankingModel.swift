@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import os
 
-@Observable public class Model {
+@Observable public class RankingModel {
     public var ranking: Ranking
     public var favoritePlayers: [Player]
     public init(ranking: Ranking = Ranking(), favoritePlayers: [Player] = []) {

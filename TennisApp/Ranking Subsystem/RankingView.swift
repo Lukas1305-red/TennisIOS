@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-import FloatingButton
 
 struct RankingView: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     @State private var filterFavoritePlayer: Bool = false
     private var players: [Player] {
         model.ranking.players
@@ -47,5 +46,5 @@ struct RankingView: View {
 
 #Preview {
     RankingView()
-        .environment(Model())
+        .environment(RankingModel())
 }

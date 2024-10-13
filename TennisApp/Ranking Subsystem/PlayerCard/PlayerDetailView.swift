@@ -8,37 +8,39 @@
 import SwiftUI
 
 struct PlayerDetailView: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var id: Int
     var image: Image {
         model.fetchImage(playerID: id)
     }
     var body: some View {
         model.getPlayerByID(playerID: id).map { player in
-            VStack(alignment: .leading) {
-                HStack(alignment: .center) {
-                    image
-                }
+            ScrollView(.vertical) {
                 VStack(alignment: .leading) {
-                    HStack {
-                        Text(player.name)
-                            .font(Font.system(size: 40, weight: .bold))
-                        FavoritePlayerButton(id: id)
+                    HStack(alignment: .center) {
+                        image
                     }
-                    Text(player.nationality)
-                        .font(Font.system(size: 30, weight: .bold))
-                        .foregroundColor(.gray)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(player.name)
+                                .font(Font.system(size: 40, weight: .bold))
+                            FavoritePlayerButton(id: id)
+                        }
+                        Text(player.nationality)
+                            .font(Font.system(size: 30, weight: .bold))
+                            .foregroundColor(.secondary)
+                    }
+                    .padding()
+                    PlayerInfoView(id: player.id)
+                    Spacer()
                 }
-                .padding()
-                PlayerInfoView(id: player.id)
-                Spacer()
             }
         }
     }
 }
 
 #Preview {
-    let model = Model()
+    let model = RankingModel()
     PlayerDetailView(id: 720)
         .environment(model)
 }

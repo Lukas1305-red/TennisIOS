@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var body: some View {
         TabView {
             PlayerOverview()
@@ -26,5 +26,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(Model())
+        .environment(RankingModel())
 }
