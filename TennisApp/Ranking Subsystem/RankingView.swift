@@ -9,19 +9,34 @@ import SwiftUI
 
 struct RankingView: View {
     @Environment(Model.self) private var model: Model
+    @State private var filterFavoritePlayer: Bool = false
     private var players: [Player] {
         model.ranking.players
     }
+    private var favoritePlayers: [Player] {
+        model.favoritePlayers
+    }
     var body: some View {
-        List {
-            if players.isEmpty {
-                Text("You have to start your server")
-            } else {
-                ForEach(players, id: \.id) { player in
-                    NavigationLink {
-                        PlayerDetailView(id: player.id)
-                    } label: {
-                        PlayerCellView(id: player.id)
+        VStack {
+            Button(action: {
+                filterFavoritePlayer.toggle()
+            }) {
+                Image(systemName: filterFavoritePlayer ? "star.fill" : "star")
+                    .foregroundColor(.orange)
+                    .imageScale(.large)
+            }
+            List {
+                if players.isEmpty {
+                    Text("You have to start your server")
+                } else {
+                    let listToShow = filterFavoritePlayer ? favoritePlayers.sorted(by: {
+                        $0.rankingPosition < $1.rankingPosition }) : players
+                    ForEach(listToShow, id: \.id) { player in
+                        NavigationLink {
+                            PlayerDetailView(id: player.id)
+                        } label: {
+                            PlayerCellView(id: player.id)
+                        }
                     }
                 }
             }
