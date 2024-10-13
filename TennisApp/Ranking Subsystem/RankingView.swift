@@ -47,5 +47,5 @@ struct RankingView: View {
 
 #Preview {
     RankingView()
-        .environment(Model() as Model)
+        .environment(Model())
 }
