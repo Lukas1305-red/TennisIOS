@@ -24,28 +24,43 @@ import Foundation
         self.id = id
     }
     init(_ model: MatchModel, id: UUID?, match: Match) {
+        self.matchModel = model
         self.win = match.win
         self.opponent = match.opponent
         self.score = match.score
+        self.id = id
         (self.firstSetOwnGames, self.firstSetOtherGames) = getScoreFromSet(score: self.score, setOne: true)
         (self.secondSetOwnGames, self.secondSetOtherGames) = getScoreFromSet(score: self.score, setOne: false)
     }
     func save() async {
         let win = win
         let opponent = opponent
-        let score = String(firstSetOwnGames) + " : " + String(firstSetOtherGames)
-                    + " / " + String(secondSetOwnGames) + " : " + String(secondSetOtherGames)
-        let match = Match(win: win, opponent: opponent, score: score)
-        matchModel?.matches.append(match)
-        print("Added match \(match.id)")
+        let score = String(firstSetOwnGames) + ":" + String(firstSetOtherGames)
+                    + "/" + String(secondSetOwnGames) + ":" + String(secondSetOtherGames)
+        if let currentID = id {
+            let match = Match(win: win, opponent: opponent, score: score, id: currentID)
+            matchModel?.matches.removeAll(where: { $0.id == currentID })
+            matchModel?.matches.append(match)
+            matchModel?.matches.sort {
+                $0.id?.uuidString ?? "0" < $1.id?.uuidString ?? "0"
+            }
+            //print("Updated match \(match.id)")
+        } else {
+            // new match has to be appended to the list
+            let match = Match(win: win, opponent: opponent, score: score, id: UUID())
+            matchModel?.matches.append(match)
+            //print("Added match \(match.id) with opponent \(opponent)")
+        }
     }
-    func update(id: UUID) async {
-        var match = matchModel?.matches.first(where: { $0.id == id })
-        if var match {
-            match.win = win
-            match.opponent = opponent
-            match.score = String(firstSetOwnGames) + " : " + String(firstSetOtherGames)
+    func update(id: UUID) {
+        if let matchIndex = matchModel?.matches.firstIndex(where: { $0.id == id }) {
+            matchModel?.matches[matchIndex].win = win
+            matchModel?.matches[matchIndex].opponent = opponent
+            matchModel?.matches[matchIndex].score = String(firstSetOwnGames) + " : " + String(firstSetOtherGames)
             + " / " + String(secondSetOwnGames) + " : " + String(secondSetOtherGames)
+        } else {
+            let newMatch = Match(win: win, opponent: opponent, score: score)
+            matchModel?.matches.append(newMatch)
         }
     }
     

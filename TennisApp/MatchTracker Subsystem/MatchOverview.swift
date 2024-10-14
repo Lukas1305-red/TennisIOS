@@ -45,4 +45,5 @@ struct MatchOverview: View {
 #Preview {
     MatchOverview()
         .environment(MatchModel())
+        .environment(RankingModel())
 }

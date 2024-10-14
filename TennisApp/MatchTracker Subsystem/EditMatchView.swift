@@ -33,13 +33,9 @@ struct EditMatchView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         Task {
-                            if editMatchViewModel.id == nil {
-                                await editMatchViewModel
-                                      .save()
-                                dismiss()
-                            } else {
-                                
-                            }
+                            await editMatchViewModel
+                                    .save()
+                            dismiss()
                         }
                     } label: {
                         Text("Save")
@@ -92,4 +88,5 @@ struct EditMatchView: View {
     let editMatchViewModel = EditMatchViewModel(model, id: UUID())
     EditMatchView(editMatchViewModel: editMatchViewModel)
         .environment(model)
+        .environment(RankingModel())
 }

@@ -30,4 +30,5 @@ struct MatchListView: View {
 #Preview {
     MatchListView()
         .environment(MatchModel())
+        .environment(RankingModel())
 }

@@ -18,4 +18,10 @@ struct Match {
         self.opponent = opponent
         self.score = score
     }
+    init (win: Bool, opponent: String, score: String, id: UUID) {
+        self.win = win
+        self.opponent = opponent
+        self.score = score
+        self.id = id
+    }
 }

@@ -20,6 +20,11 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                     Text("Tournaments")
                 }
+            MatchOverview()
+                .tabItem {
+                    Image(systemName: "tennisball")
+                    Text("Match Tracker")
+                }
         }
     }
 }
