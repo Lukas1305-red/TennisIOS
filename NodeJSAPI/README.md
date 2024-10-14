@@ -2,11 +2,11 @@
 ### For reference: https://www.youtube.com/watch?v=-MTSQjw5DrM 
 
 # Download Node with brew 
-# NOTE:
-# Homebrew is not a Node.js package manager.
-# Please ensure it is already installed on your system.
-# Follow official instructions at https://brew.sh/
-# Homebrew only supports installing major Node.js versions and might not support the latest Node.js version from the 22 release line.
+NOTE:
+Homebrew is not a Node.js package manager.
+Please ensure it is already installed on your system.
+Follow official instructions at https://brew.sh/
+Homebrew only supports installing major Node.js versions and might not support the latest Node.js version from the 22 release line.
 
 # download and install Node.js
 brew install node@22
