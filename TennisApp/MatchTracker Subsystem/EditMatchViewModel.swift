@@ -29,8 +29,13 @@ import Foundation
         self.opponent = match.opponent
         self.score = match.score
         self.id = id
-        (self.firstSetOwnGames, self.firstSetOtherGames) = getScoreFromSet(score: self.score, setOne: true)
-        (self.secondSetOwnGames, self.secondSetOtherGames) = getScoreFromSet(score: self.score, setOne: false)
+        let (ret1, ret2) = getScoreFromSet(score: self.score, setOne: true)
+        let (ret3, ret4) = getScoreFromSet(score: self.score, setOne: false)
+        print(ret1, ret2, ret3, ret4)
+        self.firstSetOwnGames = ret1
+        self.firstSetOtherGames = ret2
+        self.secondSetOwnGames = ret3
+        self.secondSetOtherGames = ret4
     }
     func save() async {
         let win = win

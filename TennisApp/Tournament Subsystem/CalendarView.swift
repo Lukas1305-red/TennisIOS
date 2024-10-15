@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text("Hello, Tournaments!")
+        Text("Coming soon").font(Font.system(size: 40, weight: .bold))
     }
 }
 

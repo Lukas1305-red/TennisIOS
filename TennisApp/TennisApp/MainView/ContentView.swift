@@ -32,4 +32,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environment(RankingModel())
+        .environment(MatchModel())
 }
