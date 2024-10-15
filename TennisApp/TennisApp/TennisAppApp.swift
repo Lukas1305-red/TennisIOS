@@ -15,5 +15,6 @@ struct TennisAppApp: App {
             ContentView()
         }
         .environment(globalModel)
+        .environment(MatchModel())
     }
 }
