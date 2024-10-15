@@ -13,20 +13,20 @@ struct PlayerCellView: View {
     var body: some View {
         model.getPlayerByID(playerID: id).map { player in
             HStack(alignment: .center, spacing: 10) {
+                Text(String(player.rankingPosition))
+                    .font(Font.system(size: 20, weight: .bold))
+                    .frame(width: 35, alignment: .center)
+                Text(player.name)
+                    .foregroundColor(.primary)
+                    .font(Font.system(size: 20))
+                    .frame(width: 100, alignment: .leading)
                 if let countryFlag = SwiftFlags.flag(for: player.nationality) {
-                    Text(String(player.rankingPosition))
-                        .font(Font.system(size: 20, weight: .bold))
-                        .frame(width: 35, alignment: .center)
-                    Text(player.name)
-                        .foregroundColor(.primary)
-                        .font(Font.system(size: 20))
-                        .frame(width: 100, alignment: .leading)
-                    Text(countryFlag)
-                        .font(Font.system(size: 40))
-                        .frame(width: 70, alignment: .center)
+                        Text(countryFlag)
+                            .font(Font.system(size: 40))
+                            .frame(width: 70, alignment: .center)
+                    }
                     Text(String(player.rankingPoints))
                         .frame(width: 50)
-                }
             }.padding()
         }
     }
