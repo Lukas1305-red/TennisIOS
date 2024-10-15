@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A12CB937DE006DC02C /* SwiftyJSON */; };
+		373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A42CB98124006DC02C /* SwiftFlags */; };
+		373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 373BF3A82CB98AFF006DC02C /* .swiftlint.yml */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		373BF3A82CB98AFF006DC02C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		37F101DD2CB6729800C91A8B /* TennisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -38,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */,
+				373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +56,7 @@
 		37F101D42CB6729800C91A8B = {
 			isa = PBXGroup;
 			children = (
+				373BF3A82CB98AFF006DC02C /* .swiftlint.yml */,
 				37F101DF2CB6729800C91A8B /* TennisApp */,
 				37F101DE2CB6729800C91A8B /* Products */,
 				37F101F92CB6DF8700C91A8B /* Ranking Subsystem */,
@@ -87,6 +97,8 @@
 			);
 			name = TennisApp;
 			packageProductDependencies = (
+				373BF3A12CB937DE006DC02C /* SwiftyJSON */,
+				373BF3A42CB98124006DC02C /* SwiftFlags */,
 			);
 			productName = TennisApp;
 			productReference = 37F101DD2CB6729800C91A8B /* TennisApp.app */;
@@ -116,6 +128,10 @@
 			);
 			mainGroup = 37F101D42CB6729800C91A8B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 37F101DE2CB6729800C91A8B /* Products */;
 			projectDirPath = "";
@@ -131,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +386,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andreabusi/SwiftFlags.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		373BF3A12CB937DE006DC02C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373BF3A02CB937DE006DC02C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		373BF3A42CB98124006DC02C /* SwiftFlags */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373BF3A32CB98124006DC02C /* XCRemoteSwiftPackageReference "SwiftFlags" */;
+			productName = SwiftFlags;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37F101D52CB6729800C91A8B /* Project object */;
 }
