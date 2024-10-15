@@ -17,27 +17,31 @@ struct RankingView: View {
         model.favoritePlayers
     }
     var body: some View {
-        VStack {
-            List {
                 if players.isEmpty {
-                    Text("You have to start your server")
-                } else {
-                    let listToShow = filterFavoritePlayer ? favoritePlayers.sorted(by: {
-                        $0.rankingPosition < $1.rankingPosition }) : players
-                    if  listToShow.isEmpty {
-                        Text("You have not saved any favorite players yet")
-                            .foregroundColor(.primary)
+                    HStack {
+                        Text("Try again")
+                            .font(Font.system(size: 40))
+                        if !model.isFetching {
+                            ReloadButton()
+                        }
                     }
-                    ForEach(listToShow, id: \.id) { player in
-                        NavigationLink {
-                            PlayerDetailView(id: player.id)
-                        } label: {
-                            PlayerCellView(id: player.id)
+                } else {
+                    List {
+                        let listToShow = filterFavoritePlayer ? favoritePlayers.sorted(by: {
+                            $0.rankingPosition < $1.rankingPosition }) : players
+                        if  listToShow.isEmpty {
+                            Text("You have not saved any favorite players yet")
+                                .foregroundColor(.primary)
+                        }
+                        ForEach(listToShow, id: \.id) { player in
+                            NavigationLink {
+                                PlayerDetailView(id: player.id)
+                            } label: {
+                                PlayerCellView(id: player.id)
+                            }
                         }
                     }
                 }
-            }
-        }
     }
 }
 
