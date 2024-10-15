@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(RankingModel.self) private var model: RankingModel
     var body: some View {
         TabView {
             PlayerOverview()

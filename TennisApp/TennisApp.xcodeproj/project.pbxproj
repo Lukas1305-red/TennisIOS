@@ -10,16 +10,32 @@
 		373BF3A22CB937DE006DC02C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A12CB937DE006DC02C /* SwiftyJSON */; };
 		373BF3A52CB98124006DC02C /* SwiftFlags in Frameworks */ = {isa = PBXBuildFile; productRef = 373BF3A42CB98124006DC02C /* SwiftFlags */; };
 		373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 373BF3A82CB98AFF006DC02C /* .swiftlint.yml */; };
+		37542F0B2CBC04F30022DDED /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37542F0A2CBC04F30022DDED /* VarelaRound-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373BF3A82CB98AFF006DC02C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		37542F092CBC041D0022DDED /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
+		37542F0A2CBC04F30022DDED /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 		37F101DD2CB6729800C91A8B /* TennisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		37542F072CBC02510022DDED /* Exceptions for "TennisApp" folder in "TennisApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 37F101DC2CB6729800C91A8B /* TennisApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		37F101DF2CB6729800C91A8B /* TennisApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				37542F072CBC02510022DDED /* Exceptions for "TennisApp" folder in "TennisApp" target */,
+			);
 			path = TennisApp;
 			sourceTree = "<group>";
 		};
@@ -53,9 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37542F012CBBFCE40022DDED /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				37542F092CBC041D0022DDED /* VarelaRound-Regular.ttf */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
 		37F101D42CB6729800C91A8B = {
 			isa = PBXGroup;
 			children = (
+				37542F0A2CBC04F30022DDED /* VarelaRound-Regular.ttf */,
+				37542F012CBBFCE40022DDED /* CustomFonts */,
 				373BF3A82CB98AFF006DC02C /* .swiftlint.yml */,
 				37F101DF2CB6729800C91A8B /* TennisApp */,
 				37F101DE2CB6729800C91A8B /* Products */,
@@ -148,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373BF3A92CB98AFF006DC02C /* .swiftlint.yml in Resources */,
+				37542F0B2CBC04F30022DDED /* VarelaRound-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +343,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TennisApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -346,6 +374,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TennisApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
