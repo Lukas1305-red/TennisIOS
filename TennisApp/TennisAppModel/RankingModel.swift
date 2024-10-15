@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-@Observable public class Model {
+@Observable public class RankingModel {
     public var ranking: Ranking
     public init(ranking: Ranking = Ranking()) {
         self.ranking = ranking

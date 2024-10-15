@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerDetailView: View {
-    @Environment(Model.self) private var model: Model
+    @Environment(RankingModel.self) private var model: RankingModel
     var id: Int
     var body: some View {
         Text("Hello " + String(id))
@@ -16,7 +16,7 @@ struct PlayerDetailView: View {
 }
 
 #Preview {
-    let model = Model()
+    let model = RankingModel()
     PlayerDetailView(id: 720)
         .environment(model)
 }
