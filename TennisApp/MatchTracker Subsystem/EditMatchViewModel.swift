@@ -31,7 +31,6 @@ import Foundation
         self.id = id
         let (ret1, ret2) = getScoreFromSet(score: self.score, setOne: true)
         let (ret3, ret4) = getScoreFromSet(score: self.score, setOne: false)
-        print(ret1, ret2, ret3, ret4)
         self.firstSetOwnGames = ret1
         self.firstSetOtherGames = ret2
         self.secondSetOwnGames = ret3
@@ -49,20 +48,18 @@ import Foundation
             matchModel?.matches.sort {
                 $0.id?.uuidString ?? "0" < $1.id?.uuidString ?? "0"
             }
-            //print("Updated match \(match.id)")
         } else {
             // new match has to be appended to the list
             let match = Match(win: win, opponent: opponent, score: score, id: UUID())
             matchModel?.matches.append(match)
-            //print("Added match \(match.id) with opponent \(opponent)")
         }
     }
     func update(id: UUID) {
         if let matchIndex = matchModel?.matches.firstIndex(where: { $0.id == id }) {
             matchModel?.matches[matchIndex].win = win
             matchModel?.matches[matchIndex].opponent = opponent
-            matchModel?.matches[matchIndex].score = String(firstSetOwnGames) + " : " + String(firstSetOtherGames)
-            + " / " + String(secondSetOwnGames) + " : " + String(secondSetOtherGames)
+            matchModel?.matches[matchIndex].score = String(firstSetOwnGames) + ":" + String(firstSetOtherGames)
+            + "/" + String(secondSetOwnGames) + ":" + String(secondSetOtherGames)
         } else {
             let newMatch = Match(win: win, opponent: opponent, score: score)
             matchModel?.matches.append(newMatch)
@@ -71,8 +68,8 @@ import Foundation
     
     func getScoreFromSet(score: String, setOne: Bool) -> (Int, Int) {
         let firstSet = score.split(separator: "/")[setOne ? 0 : 1]
-        if let firstSetOwn = Int(firstSet.split(separator: " : ")[0]),
-           let firstSetOther = Int(firstSet.split(separator: " : ")[1]) {
+        if let firstSetOwn = Int(firstSet.split(separator: ":")[0]),
+           let firstSetOther = Int(firstSet.split(separator: ":")[1]) {
             return (firstSetOwn, firstSetOther)
         } else {
             return (0, 0)
