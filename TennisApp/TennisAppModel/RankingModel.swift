@@ -12,6 +12,7 @@ import os
 @Observable public class RankingModel {
     public var ranking: Ranking
     public var favoritePlayers: [Player]
+    public var isFetching: Bool = false
     public init(ranking: Ranking = Ranking(), favoritePlayers: [Player] = []) {
         self.ranking = ranking
         self.favoritePlayers = favoritePlayers
@@ -19,7 +20,11 @@ import os
             _ = try? await fetchRankingPlayers()
         }
     }
-    private func fetchRankingPlayers() async throws {
+    public func fetchRankingPlayers() async throws {
+        defer {
+            isFetching = false
+        }
+        isFetching = true
         ranking.players.append(contentsOf: try await RankingDataSource().fetchRanking())
     }
     public func getPlayerByID(playerID: Int) -> Player? {
