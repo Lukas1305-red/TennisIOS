@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RankingView: View {
     @Environment(RankingModel.self) private var model: RankingModel
-    @State private var filterFavoritePlayer: Bool = false
+    @Binding var filterFavoritePlayer: Bool
     private var players: [Player] {
         model.ranking.players
     }
@@ -18,19 +18,16 @@ struct RankingView: View {
     }
     var body: some View {
         VStack {
-            Button(action: {
-                filterFavoritePlayer.toggle()
-            }) {
-                Image(systemName: filterFavoritePlayer ? "star.fill" : "star")
-                    .foregroundColor(.orange)
-                    .imageScale(.large)
-            }
             List {
                 if players.isEmpty {
                     Text("You have to start your server")
                 } else {
                     let listToShow = filterFavoritePlayer ? favoritePlayers.sorted(by: {
                         $0.rankingPosition < $1.rankingPosition }) : players
+                    if  listToShow.isEmpty {
+                        Text("You have not saved any favorite players yet")
+                            .foregroundColor(.primary)
+                    }
                     ForEach(listToShow, id: \.id) { player in
                         NavigationLink {
                             PlayerDetailView(id: player.id)
@@ -45,6 +42,6 @@ struct RankingView: View {
 }
 
 #Preview {
-    RankingView()
+    RankingView(filterFavoritePlayer: .constant(false))
         .environment(RankingModel())
 }
