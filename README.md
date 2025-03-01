@@ -50,14 +50,6 @@ To sum up, the app should be a fusion of a tennis wiki page and a live statistic
 - NFR3: Follow Apple's Human Interface Guidelines 
 - NFR4: Source code follows best practices
 
-## Analysis
-
-<img src="UMLClassDiagram.png" align="center" height="350" width="600"/>
-
-## System Design
-
-<img src="SystemDesign.png" align="center" height="350" width="600"/> 
-
 ## Product Backlog
 
 - RANKING-1: Implement structure of the ranking overview
