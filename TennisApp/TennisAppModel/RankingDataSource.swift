@@ -10,7 +10,7 @@ import SwiftyJSON
 import os
 
 public struct RankingDataSource {
-    private let endpointURLString = "http://127.0.0.1:8080/rankingAlt"
+    private let endpointURLString = "http://127.0.0.1:8080/rankings"
     public init() {}
     public func fetchRanking() async throws -> [Player] {
         do {
